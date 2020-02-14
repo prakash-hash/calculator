@@ -1,5 +1,6 @@
 from tkinter import *
 
+#Events for button clicks,errors etc..
 def click(event):
     global scvalue
     text = event.widget.cget("text")
@@ -32,7 +33,7 @@ root.geometry("300x400")
 root.resizable(0,0)
 
 #icon
-root.tk.call('wm', 'iconphoto', root._w, PhotoImage(file='E:\python\calc\calculator(1).png'))
+root.tk.call('wm', 'iconphoto', root._w, PhotoImage(file='E:\python\calc\calculator(1).png'))#directory where the icon was present
 
 #input box
 scvalue = StringVar()
@@ -74,6 +75,8 @@ b = Button(f,text = "Clear",font = "Lucida 25 bold",width = 14)
 b.pack(side = LEFT,padx = 1)
 b.bind("<Button-1>",click)
 f.pack()
+
+#finish
 root.mainloop()
 
 
